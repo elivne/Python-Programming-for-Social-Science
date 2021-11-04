@@ -2,8 +2,18 @@
 """
 Created on Wed Sep 15 09:51:22 2021
 
-Model running the main script: create agents in an environment read from a 
-CSV file, then make them move and interact.
+Model running the main script: creates agents in an environment read from a 
+CSV file 'in.txt', then makes them move, consume and share resources.
+
+Arguments
+---------
+number_of_agents : int [default 10]
+number_of_iterations : int [def 100]
+neighbourhood_proximity : int [def 20]
+
+Output
+------
+Final state of environment is written as CSV to 'out.txt'.
 
 @author: Eran Livne
 """

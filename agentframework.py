@@ -2,9 +2,14 @@
 """
 Created on Thu Sep 16 11:51:14 2021
 
-This module defines the class Agent.
-An instance of Agent is initiated with random x,y values (location) on a grid. 
-Agent has a method to move 1 step in a random, diagonal direction.
+This module defines the Agent class.
+An instance of Agent is initiated with random x,y values (location) on a grid,
+as well as a link to the shared environment and a list of all agents. 
+Agent has a method to move 1 step in a random, diagonal direction, a second
+method to eat resources and a third to share with a nearby agent. Another
+method checks its distance from a given agent.
+
+Class variables are kept hidden.
 
 @author: Eran Livne
 """
@@ -147,7 +152,7 @@ class Agent():
                 self._store = other_agent.store = avg
                 #print(self, other_agent) # test after
             # End if
-        # End loop
+        # End for
 
     def distanceBetween(self, agent):
         """
