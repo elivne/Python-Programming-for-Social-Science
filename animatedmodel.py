@@ -97,7 +97,7 @@ def update(frame_number):
     elif num_of_iterations == 0:
         carry_on = False
         print("Completed the requested number of iterations.")
-    elif random.random() < 0.1:
+    elif random.random() < 0.01:
         carry_on = False
         print("Reached the random stopping condition.")
     
@@ -111,7 +111,7 @@ def gen_function(b = [0]):
     global carry_on #Not actually needed as we're not assigning, but clearer
     while (a < 10) & (carry_on) :
         yield a			# Returns control and waits next call.
-        a = a + 1
+        #a = a + 1
 
 # Set and launch animation
 animation = matplotlib.animation.FuncAnimation(fig, update, frames=gen_function, \
